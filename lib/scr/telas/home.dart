@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/scr/cores.dart';
+import 'package:flutter_app/scr/modelos/categoria.dart';
+import 'package:flutter_app/scr/widgets/categorias.dart';
+import 'package:flutter_app/scr/widgets/titulo.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -19,8 +22,10 @@ class _HomeState extends State<Home> {
               children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text("Que serviço você gostaria de solicitar ?",
-                      style: TextStyle(fontSize: 23)),
+                  child: Titulo(
+                    text: "Que serviço você está procurando ?",
+                    size: 22,
+                  ),
                 ),
                 Stack(
                   children: <Widget>[
@@ -69,6 +74,15 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
+            SizedBox(
+              height: 5,
+            ),
+            Categorias(),
+            SizedBox(
+              height: 20,
+            ),
+            Titulo(text: "Serviços", size: 20,)
+
           ],
         ),
       ),
