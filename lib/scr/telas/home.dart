@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter_app/scr/cores.dart';
 import 'package:flutter_app/scr/modelos/categoria.dart';
 import 'package:flutter_app/scr/widgets/categorias.dart';
@@ -106,15 +107,59 @@ class _HomeState extends State<Home> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
                             Padding(
-                              padding: const EdgeInsets.only(left: 20, top: 150),
-                              child: Titulo(text: "Serviço exemplo",),
+                              padding: const EdgeInsets.only(left: 5, top: 140),
+                              child: Titulo(text: "Servico exemplo",size: 17,),
+                            ),
+                            Padding(padding: EdgeInsets.all(4),
+                            child: Container(
+                              /*decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: white, boxShadow: [
+                                BoxShadow(
+                                    color: grey[300], offset: Offset(1, 1), blurRadius: 4)
+                              ]),*/
+                            ),
+                            )
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Row(
+                              children: <Widget>[
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 4, top: 180),
+                                  child: Titulo(text: "4.7",color: grey, size: 19,),
+                                ),
+                                SizedBox(width: 2,),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 1, top: 180),
+                                  child: Icon(Icons.star, color: yellow, size: 16,),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 1, top: 180),
+                                  child: Icon(Icons.star, color: yellow, size: 16,),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 1, top: 180),
+                                  child: Icon(Icons.star, color: yellow, size: 16,),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 1, top: 180),
+                                  child: Icon(Icons.star, color: yellow, size: 16,),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 1, top: 180),
+                                  child: Icon(Icons.star, color: grey, size: 16,),
+                                ),
+                              ],
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(left: 20, top: 150),
-                              child: Icon(Icons.star_border),
-                            ),
+                              padding: const EdgeInsets.only(right: 9, top: 180),
+                              child: Titulo(text: "\R\$12.99", weight: FontWeight.bold,),),
                           ],
-                        )
+                        ),
+
                       ],
                     ),
 
