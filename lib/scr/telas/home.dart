@@ -3,6 +3,7 @@ import 'package:flutter_app/scr/cores.dart';
 import 'package:flutter_app/scr/modelos/categoria.dart';
 import 'package:flutter_app/scr/widgets/categorias.dart';
 import 'package:flutter_app/scr/widgets/titulo.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -78,10 +79,50 @@ class _HomeState extends State<Home> {
               height: 5,
             ),
             Categorias(),
-            SizedBox(
-              height: 20,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Titulo(text: "Serviços", size: 20, color: grey,),
             ),
-            Titulo(text: "Serviços", size: 20,)
+            Container(
+              height: 220,
+              child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 2,
+                  itemBuilder: (_, index){
+                return Padding(padding: EdgeInsets.all(8),
+                child: Container(
+                height: 220,
+                width: 200,
+                    decoration: BoxDecoration(color: white, boxShadow: [
+                    BoxShadow(
+                    color: grey[300], offset: Offset(1, 1), blurRadius: 4)
+                    ]),
+                    child: Column(
+                    children: <Widget>[
+                    Stack(
+                      children: [
+                        Image.asset("imagens/1.jpg", height: 140,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20, top: 150),
+                              child: Titulo(text: "Serviço exemplo",),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20, top: 150),
+                              child: Icon(Icons.star_border),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+
+                    ],
+                    ),
+                    )
+                );}),
+            )
 
           ],
         ),
