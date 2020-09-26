@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_app/scr/cores.dart';
 import 'package:flutter_app/scr/modelos/categoria.dart';
+import 'package:flutter_app/scr/widgets/bottom_navigation_icons.dart';
 import 'package:flutter_app/scr/widgets/categorias.dart';
+import 'package:flutter_app/scr/widgets/featured_servico.dart';
 import 'package:flutter_app/scr/widgets/titulo.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
@@ -82,94 +85,46 @@ class _HomeState extends State<Home> {
             Categorias(),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Titulo(text: "Serviços", size: 20, color: grey,),
+              child: Titulo(text: "Serviços Recentes", size: 20, color: grey,),
             ),
-            Container(
-              height: 220,
-              child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 2,
-                  itemBuilder: (_, index){
-                return Padding(padding: EdgeInsets.all(8),
-                child: Container(
-                height: 220,
-                width: 200,
-                    decoration: BoxDecoration(color: white, boxShadow: [
-                    BoxShadow(
-                    color: grey[300], offset: Offset(1, 1), blurRadius: 4)
-                    ]),
-                    child: Column(
-                    children: <Widget>[
-                    Stack(
-                      children: [
-                        Image.asset("imagens/1.jpg", height: 140,),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Padding(
-                              padding: const EdgeInsets.only(left: 5, top: 140),
-                              child: Titulo(text: "Servico exemplo",size: 17,),
-                            ),
-                            Padding(padding: EdgeInsets.all(4),
-                            child: Container(
-                              /*decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: white, boxShadow: [
-                                BoxShadow(
-                                    color: grey[300], offset: Offset(1, 1), blurRadius: 4)
-                              ]),*/
-                            ),
-                            )
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 4, top: 180),
-                                  child: Titulo(text: "4.7",color: grey, size: 19,),
-                                ),
-                                SizedBox(width: 2,),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 1, top: 180),
-                                  child: Icon(Icons.star, color: yellow, size: 16,),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 1, top: 180),
-                                  child: Icon(Icons.star, color: yellow, size: 16,),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 1, top: 180),
-                                  child: Icon(Icons.star, color: yellow, size: 16,),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 1, top: 180),
-                                  child: Icon(Icons.star, color: yellow, size: 16,),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 1, top: 180),
-                                  child: Icon(Icons.star, color: grey, size: 16,),
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 9, top: 180),
-                              child: Titulo(text: "\R\$12.99", weight: FontWeight.bold,),),
-                          ],
-                        ),
 
-                      ],
-                    ),
+            Featured(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Titulo(text: "Anuncios", size: 20, color: grey,),
 
-                    ],
-                    ),
-                    )
-                );}),
+            ),
+            Stack(
+              children: <Widget>[
+                Padding(padding: EdgeInsets.all(8),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(40),
+                  child: Image.asset("imagens/popular2.png"),),
+                )
+              ],
             )
-
           ],
+        ),
+      ),
+      bottomNavigationBar: Container(
+        height: 70,
+        color: white,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            BottomNavIcon(
+                imagem: "home.png",
+                nome: "home"
+            ),
+            BottomNavIcon(
+                imagem: "home.png",
+                nome: "home"
+            ),
+            BottomNavIcon(
+                imagem: "user.png",
+                nome: "Conta"
+            ),
+          ]
         ),
       ),
     );
