@@ -7,7 +7,7 @@ class Servico{
     final double nota;
     final String nome;
 
-  Servico({this.trabalho, this.imagem,this.preco, this.nota, this.nome});
+  Servico({this.trabalho, this.imagem,this.preco, this.nota, this.nome,});
 
 
 

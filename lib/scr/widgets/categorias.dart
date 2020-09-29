@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/scr/modelos/categoria.dart';
 import 'package:flutter_app/scr/widgets/titulo.dart';
 
-import '../cores.dart';
+import '../helpers/cores.dart';
 
 List<Categoria> categoriasList = [
     Categoria(name: "Aulas", image: "aulas.png"),

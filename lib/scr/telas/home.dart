@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_app/scr/cores.dart';
+import 'package:flutter_app/scr/helpers/cores.dart';
 import 'package:flutter_app/scr/modelos/categoria.dart';
 import 'package:flutter_app/scr/widgets/bottom_navigation_icons.dart';
 import 'package:flutter_app/scr/widgets/categorias.dart';

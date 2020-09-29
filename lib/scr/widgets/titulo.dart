@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../cores.dart';
+import '../helpers/cores.dart';
 
 class Titulo extends StatelessWidget {
   final String text;
