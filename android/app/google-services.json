@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "205347186442",
+    "firebase_url": "https://emformalapp.firebaseio.com",
+    "project_id": "emformalapp",
+    "storage_bucket": "emformalapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205347186442:android:dd0f1236c975fed164bcf3",
+        "android_client_info": {
+          "package_name": "com.example.flutter_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "205347186442-j8h0hktmereee398ugos9fjn35iv0423.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDle1j8wX-Gsog_SS6CxXSxi2lOHIkipz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "205347186442-j8h0hktmereee398ugos9fjn35iv0423.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

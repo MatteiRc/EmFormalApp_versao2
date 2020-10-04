@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/scr/helpers/cores.dart';
+import 'package:flutter_app/scr/helpers/tela_navegador.dart';
+import 'package:flutter_app/scr/telas/cadastro.dart';
 import 'package:flutter_app/scr/widgets/titulo.dart';
 
 class LoginTela extends StatefulWidget {
@@ -79,11 +81,16 @@ class _LoginTelaState extends State<LoginTela> {
               ),
             ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Titulo(text: "Cadastre-se", size: 20,),
-              ],
+            GestureDetector(
+              onTap: (){
+                changeScreen(context, CadastroTela());
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Titulo(text: "Cadastre-se", size: 20,),
+                ],
+              ),
             ),
           ],
 
